@@ -1,0 +1,50 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 57px 0 40px;
+}
+
+.footer__inner {
+  text-align: center;
+}
+.smedia{
+  @include d-flex(space-around);
+  color: #91919D;
+  margin-bottom: 35px;
+}
+.media{
+  @include d-flex(center)
+  
+}
+.fa-linkedin::before,
+.fa-telegram::before,
+.fa-reddit::before,
+.fa-medium::before,
+.fa-facebook::before,
+.fa-twitter::before,
+.fa-youtube::before{
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+hr{
+  border: 1px solid #282B31;
+  margin-bottom: 35px;
+}
+.media a{
+  color: #91919D;
+  transition: .5s;
+  &:hover{
+    color: #F2D080;
+  }
+}
+@media (max-width:1025px) {
+  .socmed{
+    font-size: 15px;
+  }
+}
+@media (max-width:730px) {
+  .socmed{
+    display: none;
+  }
+}

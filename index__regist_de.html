@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhiteBit</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="icon" type="icon" href="https://cdn.whitebit.com/static/icon.svg">
+</head>
+<body class="body">
+
+  <div class="form-container sign-in-form">
+  <div class="form-box sign-in-box">
+    <h2>Anmeldung</h2>
+    <form action="">
+      <div class="field">
+        <i class="fas fa-at"></i>
+        <input type="email" placeholder="E-Mail-ID" required>
+      </div>
+      <div class="field">
+        <i class="fas fa-key"></i>
+        <input class="password-input" type="password" placeholder="Passwort" required>
+        <div class="eye-btn"><i class="fas fa-eye-slash"></i></div>
+      </div>
+      <div class="forgot-link">
+        <a href="">Passwort vergessen?</a>
+      </div>
+      <input class="submit-btn" type="submit" value="Anmeldung">
+    </form>
+    <div class="login-options">
+      <p class="text">
+        Oder melden Sie sich an mit...
+      </p>
+      <div class="other-login">
+        <a href="https://www.google.com/account/about/"><img src="img/Google__G__Logo.svg" alt=""></a>
+        <a href="https://www.facebook.com/home.php"><img src="img/facebook-icon.svg" alt=""></a>
+        <a href="https://developer.apple.com/sign-in-with-apple/"><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <div class="imgBox sign-in-imgBox">
+    <div class="sliding-link">
+      <p>Sie haben kein Konto?</p>
+      <span class="sign-up-btn">Anmelden</span>
+    </div>
+    <img src="img/signin-img.png" alt="">
+  </div>
+ 
+</div>
+
+<div class="form-container sign-up-form">
+  <div class="imgBox sign-up-imgBox">
+    <div class="sliding-link">
+      <p>Schon ein Mitglied?</p>
+      <span class="sign-in-btn">Anmelden</span>
+    </div>
+    <img src="img/signup-img.png" alt="">
+  </div>
+  <div class="form-box sign-up-box">
+    <h2>Anmelden</h2>
+    <div class="login-options">
+      <div class="other-login">
+        <a href="https://www.google.com/account/about/"><img src="img/Google__G__Logo.svg" alt=""></a>
+        <a href="https://www.facebook.com/home.php"><img src="img/facebook-icon.svg" alt=""></a>
+        <a href="https://developer.apple.com/sign-in-with-apple/"><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt=""></a>
+      </div>
+      <p class="text">
+        Oder melden Sie sich per E-Mail an...
+      </p>
+    </div> 
+    <form action="">
+      <div class="field">
+        <i class="fas fa-at"></i>
+        <input type="email" placeholder="E-Mail-ID" required>
+      </div>
+      <div class="field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Vollständiger Name" required>
+      </div>
+      <div class="field">
+        <i class="fas fa-key"></i>
+        <input  type="password" placeholder="Passwort" required>
+      </div>
+      <div class="field">
+        <i class="fas fa-lock-open"></i>
+        <input  type="password" placeholder="Kennwort bestätigen" required>
+      </div>
+      <input class="submit-btn" type="submit" value="Anmelden">
+    </form>
+
+  </div>
+</div>
+
+  <script>
+    const textInputs = document.querySelectorAll("input");
+
+    textInputs.forEach(textInput => {
+      textInput.addEventListener("focus", () => {
+        let parent = textInput.parentNode;
+        parent.classList.add("active");
+      });
+
+      textInput.addEventListener("blur", () => {
+        let parent = textInput.parentNode;
+        parent.classList.remove("active");
+      });
+    });
+
+    const passwordInput = document.querySelector(".password-input");
+    const eyeBtn = document.querySelector(".eye-btn");
+
+    eyeBtn.addEventListener("click", () => {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeBtn.innerHTML = "<i class='fas fa-eye'></i>";
+      } else {
+        passwordInput.type = "password";
+        eyeBtn.innerHTML = "<i class='fas fa-eye-slash'></i>";
+      }
+    });
+
+
+
+    
+    const signUpBtn = document.querySelector(".sign-up-btn");
+    const signInBtn = document.querySelector(".sign-in-btn");
+    const signUpForm = document.querySelector(".sign-up-form");
+    const signInForm = document.querySelector(".sign-in-form");
+
+    signUpBtn.addEventListener("click", () => {
+      signInForm.classList.add("hide");
+      signUpForm.classList.add("show");
+      signInForm.classList.remove("show");
+    });
+
+    signInBtn.addEventListener("click", () => {
+      signInForm.classList.remove("hide");
+      signUpForm.classList.remove("show");
+      signInForm.classList.add("show");
+    });
+  </script>
+</body>
+
+</html>

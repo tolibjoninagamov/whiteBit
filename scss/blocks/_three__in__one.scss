@@ -1,0 +1,85 @@
+.three__in__one {
+  padding: 56px 0 72px 0;
+  background-color: #06060a;
+  color: #fff;
+}
+
+.three__in__one__inner {
+  text-align: center;
+  background: linear-gradient(180deg, rgba(7, 7, 11, 0) 7.93%, #07070B 61.24%);
+}
+
+.in__one__title {
+  font-size: 42px;
+  line-height: 46px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.in__one__description {
+  font-size: 16px;
+  line-height: 26px;
+  color: #91919D;
+  margin-bottom: 102px;
+}
+
+.phones {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.type {
+  width: 300px;
+  font-size: 21px;
+  line-height: 32px;
+  margin-bottom: 36px;
+}
+
+.three__in__one__btn {
+  background: #F2D080;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 22px 26px 21px;
+  color: #07070B;
+}
+
+@media (max-width:1025px) {
+  .in__one__title {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .tel {
+    width: 90%;
+  }
+}
+
+@media (max-width:769px) {
+  .in__one__title {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  .in__one__description {
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 85px;
+  }
+
+  .tel {
+    width: 70%;
+  }
+}
+@media (max-width:502px) {
+  .type{
+ margin: 0 auto;
+ padding-bottom: 35px;
+  }
+  .tel{
+    margin-bottom: 25px;
+  }
+}

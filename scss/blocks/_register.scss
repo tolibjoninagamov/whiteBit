@@ -1,0 +1,259 @@
+.body {
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #f2d080, #eece72, #eacc65, #e5ca56, #dfc947);
+  @include d-flex(center);
+}
+
+.form-container {
+  position: absolute;
+  @include d-flex(center);
+  font-size: 1em;
+}
+
+.form-box {
+  z-index: 999;
+  background-color: #000;
+  box-shadow: 0 5px 25px rgb(0, 0, 0 / 15%);
+  border-radius: 5px;
+  padding: 50px 40px;
+  width: 350px;
+  overflow: hidden;
+}
+
+.form-box h2 {
+  font-size: 1.65em;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #fff
+}
+
+.form-box .field {
+  @include d-flex(center);
+  border-bottom: 2px solid #eee;
+  margin-bottom: 25px;
+}
+
+.form-box .field.active {
+  border-bottom: 2px solid #F2D080;
+  transition: 0.3s ease;
+}
+
+.form-box .field input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  font-size: 1em;
+  padding-bottom: 5px;
+  color: #F2D080;
+}
+
+.form-box .field i {
+  color: #828da0;
+  font-size: 1.3em;
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
+
+.form-box .field.active i {
+  color: #F2D080;
+  transition: 0.3s ease;
+}
+
+::placeholder {
+  color: #828da0;
+  font-size: 0.85em;
+}
+
+.eye-btn {
+  cursor: pointer;
+}
+
+.eye-btn i:hover {
+  color: #F2D080;
+  transition: 0.3s ease;
+}
+
+.forgot-link {
+  text-align: right;
+  transform: translateY(-10px);
+}
+
+.forgot-link a {
+  color: #F2D080;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.submit-btn {
+  background: #F2D080;
+  color: #000;
+  border: none;
+  outline: none;
+  width: 120px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-size: 0.65em;
+  font-weight: 500;
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.login-options {
+  @include d-flex(center);
+  flex-direction: column;
+}
+
+.login-options .text {
+  color: #828da0;
+  font-size: 0.85em;
+  margin: 25px 0;
+  font-weight: 500;
+}
+
+.other-login {
+  display: flex;
+}
+
+.other-login a {
+  border: 1px solid #ccc;
+  padding: 11px 32px;
+  border-radius: 12px;
+  @include d-flex(center);
+  margin: 0 5px;
+  transition: border 0.3s ease;
+}
+
+.other-login a:hover {
+  border: 1px solid #F2D080;
+}
+
+.other-login a img {
+  width: 15px;
+}
+
+.imgBox img {
+  max-width: 270px;
+}
+
+.sliding-link {
+  display: flex;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+}
+.sliding-link p{
+  color: #fff;
+  font-size: 14px;
+}
+
+.sliding-link span {
+  color: #F2D080;
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.imgBox {
+  z-index: 888;
+  @include d-flex(center);
+  flex-direction: column;
+  background-color: #000;
+  box-shadow: 0 5px 25px rgb(0, 0, 0 / 15%);
+  height: 400px;
+  padding: 15px 35px;
+}
+
+.sign-in-imgBox {
+  border-radius: 0 5px;
+}
+
+.sign-up-imgBox {
+  border-radius: 5px 0 0 5px;
+}
+
+.sign-in-form.hide .sign-in-box {
+  transform: translateX(100%);
+  visibility: hidden;
+}
+
+.sign-in-form.hide .sign-in-imgBox {
+  transform: translateX(-100%);
+  visibility: hidden;
+}
+
+.sign-in-form.show .sign-in-box,
+.sign-in-form.show .sign-in-imgBox {
+  transform: translateX(0);
+  visibility: visible;
+  transition: 0.5s ease;
+}
+
+.sign-up-form .sign-up-imgBox {
+  transform: translateX(100%);
+  visibility: hidden;
+}
+
+.sign-up-form .sign-up-box {
+  transform: translateX(-100%);
+  visibility: hidden;
+}
+
+.sign-up-form.show .sign-up-imgBox,
+.sign-up-form.show .sign-up-box {
+  transform: translateX(0);
+  visibility: visible;
+  transition: 0.5s ease;
+}
+
+@media screen and (max-width:735px) {
+  .form-container{
+    flex-direction: column;
+    top: 0;
+    overflow: hidden;
+    padding: 30px;
+  }
+  .form-box{
+    box-shadow: none;
+    padding: 0;
+  }
+  .imgBox img{
+    max-width: 45%;
+    min-width: 180px;
+  }
+  .imgBox{
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+  }
+  .sign-up-form{
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width:738px) {
+  .form-box{
+    padding: 50px;
+  }
+}
+@media screen and (max-width:450px) {
+  .form-container{
+    font-size: 0.9em;
+  }
+  .form-box{
+    width: 100%;
+    padding: 50px;
+  }
+  .other-login a{
+    padding: 5px 22px;
+  }
+}
+
+@media screen and (max-width:325px) {
+  .other-login a{
+    padding: 9px 25px;
+    margin: 0 3px;
+  }
+}
